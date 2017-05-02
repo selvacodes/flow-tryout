@@ -1,0 +1,12 @@
+//var req = require('request');
+//var fs = require('fs');
+
+//req('http://www.pluralsight.com/').pipe//(fs.createWriteStream('ps.html'));
+
+process.resume();
+process.stdin.setEncoding('utf8');
+
+process.stdin.on('data', function(data_chunk){
+process.stdout.emit(data_chunk);
+});
+

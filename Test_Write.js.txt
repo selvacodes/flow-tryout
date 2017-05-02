@@ -1,0 +1,4 @@
+var req = require('request');
+var fs = require('fs');
+
+req('http://www.pluralsight.com/').pipe(fs.createWriteStream('ps.html'));
