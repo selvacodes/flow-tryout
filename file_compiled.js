@@ -10,14 +10,13 @@ const changeCase = arrayData =>
   )
 
 function writeDataToFile(data) {
-  return writeFile("readme1.txt", data).then(x => x + "test")
+  return writeFile("readme1.txt", data)
 }
 
 function readFile(filename) {
   return new Promise((resolve, reject) => {
     fileSys.readFile(filename, "utf-8", function(err, data) {
       if (err) reject(err)
-      // console.log('data - ' + data)
       resolve(data)
     })
   })
@@ -27,7 +26,7 @@ function writeFile(filename, data) {
   return new Promise((resolve, reject) => {
     fileSys.writeFile(filename, data, function(err, data) {
       if (err) reject(err)
-      resolve("resolved")
+      resolve("File written")
     })
   })
 }

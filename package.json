@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel file.js --out-file file_compiled.js && prettier --no-semi *_compiled.js --write ",
     "appbuild": "babel src --out-dir dist && prettier --write ./dist/*.js",
-    "format": "prettier *.js --write &&  standard --fix",
+    "format": "prettier --no-semi *.js --write",
     "start": "node index.js"
   },
   "author": "",
